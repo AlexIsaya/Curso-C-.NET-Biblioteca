@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FFC9360-A7F0-48EF-8B7F-B0B3D6D7F6F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Biblioteca</RootNamespace>
+    <AssemblyName>Biblioteca</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlquilerLibrosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlquilerLibrosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="modelo\Alquiler.cs">
+      <DependentUpon>dbbiblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="modelo\dbbiblioteca.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbbiblioteca.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="modelo\dbbiblioteca.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbbiblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="modelo\dbbiblioteca.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbbiblioteca.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="modelo\Libros.cs">
+      <DependentUpon>dbbiblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="modelo\Socios.cs">
+      <DependentUpon>dbbiblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="modelo\sysdiagrams.cs">
+      <DependentUpon>dbbiblioteca.tt</DependentUpon>
+    </Compile>
+    <Compile Include="negocio\cnAlquiler.cs" />
+    <Compile Include="vistas\alquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\alquiler.Designer.cs">
+      <DependentUpon>alquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\empleados.Designer.cs">
+      <DependentUpon>empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\inicio.Designer.cs">
+      <DependentUpon>inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\libros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\libros.Designer.cs">
+      <DependentUpon>libros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\plantilla\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\plantilla\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="vistas\alquiler.resx">
+      <DependentUpon>alquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\empleados.resx">
+      <DependentUpon>empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\inicio.resx">
+      <DependentUpon>inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\libros.resx">
+      <DependentUpon>libros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\plantilla\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="modelo\dbbiblioteca.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>dbbiblioteca.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AlquilerLibrosDataSet.xsc">
+      <DependentUpon>AlquilerLibrosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AlquilerLibrosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlquilerLibrosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AlquilerLibrosDataSet.xss">
+      <DependentUpon>AlquilerLibrosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="modelo\dbbiblioteca.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbbiblioteca.edmx</DependentUpon>
+      <LastGenOutput>dbbiblioteca.Context.cs</LastGenOutput>
+    </None>
+    <None Include="modelo\dbbiblioteca.edmx.diagram">
+      <DependentUpon>dbbiblioteca.edmx</DependentUpon>
+    </None>
+    <None Include="modelo\dbbiblioteca.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>dbbiblioteca.edmx</DependentUpon>
+      <LastGenOutput>dbbiblioteca.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AlquilerLibrosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alquiler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_libros" Type="Int32" />
+    <Property Name="id_socios" Type="Int32" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Libros" Relationship="Self.FK_Alquiler_Libros" FromRole="Alquiler" ToRole="Libros" />
+    <NavigationProperty Name="Socios" Relationship="Self.FK_Alquiler_Socios" FromRole="Alquiler" ToRole="Socios" />
+  </EntityType>
+  <EntityType Name="Libros">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="descrip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Alquiler" Relationship="Self.FK_Alquiler_Libros" FromRole="Libros" ToRole="Alquiler" />
+  </EntityType>
+  <EntityType Name="Socios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dni" Type="Int32" />
+    <NavigationProperty Name="Alquiler" Relationship="Self.FK_Alquiler_Socios" FromRole="Socios" ToRole="Alquiler" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Alquiler_Libros">
+    <End Role="Libros" Type="Self.Libros" Multiplicity="0..1" />
+    <End Role="Alquiler" Type="Self.Alquiler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libros">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Alquiler">
+        <PropertyRef Name="id_libros" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Alquiler_Socios">
+    <End Role="Socios" Type="Self.Socios" Multiplicity="0..1" />
+    <End Role="Alquiler" Type="Self.Alquiler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Socios">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Alquiler">
+        <PropertyRef Name="id_socios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AlquilerLibrosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alquiler" EntityType="Self.Alquiler" />
+    <EntitySet Name="Libros" EntityType="Self.Libros" />
+    <EntitySet Name="Socios" EntityType="Self.Socios" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_Alquiler_Libros" Association="Self.FK_Alquiler_Libros">
+      <End Role="Libros" EntitySet="Libros" />
+      <End Role="Alquiler" EntitySet="Alquiler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Alquiler_Socios" Association="Self.FK_Alquiler_Socios">
+      <End Role="Socios" EntitySet="Socios" />
+      <End Role="Alquiler" EntitySet="Alquiler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

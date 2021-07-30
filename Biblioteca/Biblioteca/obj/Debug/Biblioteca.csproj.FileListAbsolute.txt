@@ -1,0 +1,20 @@
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe.config
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.pdb
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.vistas.alquiler.resources
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.vistas.empleados.resources
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.vistas.libros.resources
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.frmplantilla.resources
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Properties.Resources.resources
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csproj.GenerateResource.Cache
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe
+c:\users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.pdb
+C:\Users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\EntityFramework.dll
+C:\Users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\EntityFramework.xml
+C:\Users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pc_08\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.vistas.inicio.resources
+D:\Curso Programación\4-Conexion a BD\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe.config
+D:\Curso Programación\4-Conexion a BD\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe
+D:\Curso Programación\4-Conexion a BD\Biblioteca\Biblioteca\obj\Debug\Biblioteca.pdb
